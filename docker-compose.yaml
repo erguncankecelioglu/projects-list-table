@@ -2,5 +2,3 @@ services:
   projects-table:
     build:
       dockerfile: Dockerfile
-    ports:
-      - 80:3000
