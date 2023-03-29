@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# About
+
+Displaying the projects in a server as expandable table, made by firebase database without backend. In order to use enter database credentials in .env and you are good to go.
+
 ## Available Scripts
 
 In the project directory, you can run:
