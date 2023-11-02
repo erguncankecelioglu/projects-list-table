@@ -1,74 +1,56 @@
-# Getting Started with Create React App
+# Internship Project Management
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This web application serves as a comprehensive platform to manage and display various internship projects. Users can seamlessly add new projects, edit existing ones, and delete them as per requirement. The application is designed to be user-friendly, ensuring a smooth user experience.
 
-# About
+## Table of Contents
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Setup and Installation](#setup-and-installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-Displaying the projects in a server as expandable table, made by firebase database without backend. In order to use enter database credentials in .env and you are good to go.
+## Features
 
-## Available Scripts
+### **Add New Project**
+Users can introduce new projects by providing relevant details, enhancing the diversity of projects showcased.
 
-In the project directory, you can run:
+### **Edit Project**
+The platform allows users to make modifications to existing project details, ensuring that all information is up-to-date.
 
-### `npm start`
+### **Delete Project**
+Users have the flexibility to remove projects from the list if they are no longer relevant or needed.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### **View Projects**
+All projects are easily accessible and displayed on the main page, complete with options to edit or delete as needed.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- **React.js**: Utilized for building the user interface and handling the state of the application.
+- **Firebase**: Employed as the backend service to store and manage the project data.
+- **Material-UI**: A React UI framework used for designing a smooth and responsive user interface.
+- **React-Modal**: Implemented for displaying modal dialogs and forms.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Setup and Installation
 
-### `npm run build`
+Needs a .env file with following parameters:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+REACT_APP_FIREBASE_API_KEY=your-api-key
+REACT_APP_FIREBASE_AUTH_DOMAIN=your-auth-domain
+REACT_APP_FIREBASE_DATABASE_URL=your-database-url
+REACT_APP_FIREBASE_PROJECT_ID=your-project-id
+REACT_APP_FIREBASE_STORAGE_BUCKET=your-storage-bucket
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your-sender-id
+REACT_APP_FIREBASE_APP_ID=your-app-id
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Usage
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Adding a New Project
+Click the "+" button at the top of the project list table, fill out the form in the modal, and submit.
 
-### `npm run eject`
+### Editing a Project
+Click the "Edit" button adjacent to the desired project, modify details in the form within the modal, and click "Save Changes."
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Deleting a Project
+Click the "Delete" button next to the relevant project, and confirm the deletion in the modal.

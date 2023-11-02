@@ -79,6 +79,14 @@ const Row = ({ project, handleEdit, handleDelete }) => {
                             <Typography>
                                 <strong>Guide:</strong> {project.guide}
                             </Typography>
+                            <Typography>
+                                <strong>GitHub Link: </strong>
+                                <a
+                                href={project.github}
+                            >
+                                {project.github}
+                            </a>
+                            </Typography>
                         </Box>
                     </TableCell>
                 </TableRow>
@@ -98,6 +106,7 @@ const App = () => {
         description: '',
         projectLink: '',
         guide: '',
+        github: '',
     });
 
     const [customStyles, setCustomStyles]  = useState({
@@ -168,6 +177,7 @@ const App = () => {
                 description: formData.description,
                 link: formData.projectLink,
                 guide: formData.guide,
+                github: formData.github,
             });
             setFormData({
                 projectName: '',
@@ -175,6 +185,7 @@ const App = () => {
                 description: '',
                 projectLink: '',
                 guide: '',
+                github: '',
             });
             handleCloseModal();
         } catch (error) {
@@ -203,6 +214,7 @@ const App = () => {
             description: project.description,
             projectLink: project.link,
             guide: project.guide,
+            github: project.github,
         });
     };
 
@@ -217,6 +229,7 @@ const App = () => {
                 description: formData.description,
                 link: formData.projectLink,
                 guide: formData.guide,
+                github: formData.github,
             });
             handleCloseModal();
         } catch (error) {
@@ -246,6 +259,7 @@ const App = () => {
             description: '',
             projectLink: '',
             guide: '',
+            github: '',
             }
         )
         setSelectedProject(null);
@@ -259,7 +273,10 @@ const App = () => {
 
     return (
         <>
-
+            <Typography variant="h4" style={{ textAlign: 'center', marginTop: '20px' }}>
+                Internship Projects
+            </Typography>
+            <br/>
             <TableContainer component={Card} style={{ width: '80%', margin: 'auto'}}>
                 <Table aria-label="collapsible table">
                     <TableHead>
@@ -345,6 +362,15 @@ const App = () => {
                                     onChange={handleInputChange}
                                 />
                             </Box>
+                            <Box marginBottom={2}>
+                                <TextField
+                                    fullWidth
+                                    label="GitHub Link"
+                                    name="github"
+                                    value={formData.github}
+                                    onChange={handleInputChange}
+                                />
+                            </Box>
                             <Button type="submit" variant="contained">
                                 Submit
                             </Button>
@@ -404,6 +430,15 @@ const App = () => {
                                     multiline
                                     rows={2}
                                     value={formData.guide}
+                                    onChange={handleInputChange}
+                                />
+                            </Box>
+                            <Box marginBottom={2}>
+                                <TextField
+                                    fullWidth
+                                    label="GitHub Link"
+                                    name="github"
+                                    value={formData.github}
                                     onChange={handleInputChange}
                                 />
                             </Box>
